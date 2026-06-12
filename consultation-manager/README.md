@@ -1,61 +1,56 @@
 # Consultation Manager
 
-## Overview
-
-Consultation Manager is a Spring Boot based application for managing clients and consultations.
-
-## Tech Stack
-
-* Java 17
-* Spring Boot
-* Spring Security
-* JWT Authentication
-* MySQL
-* Swagger UI
-* Maven
+Spring Boot + MySQL based Consultation Management System.
 
 ## Features
 
-* User Registration
-* User Login
-* JWT Authentication
-* Client CRUD Operations
-* Consultation CRUD Operations
-* Consultation History by Client
-* Swagger API Documentation
+- JWT Authentication
+- User Registration & Login
+- Client CRUD Operations
+- Consultation CRUD Operations
+- Consultation History by Client
+- Swagger API Documentation
+- MySQL Database Integration
+
+## Tech Stack
+
+- Java 17
+- Spring Boot
+- Spring Security
+- JWT
+- MySQL
+- Spring Data JPA
+- Swagger OpenAPI
 
 ## API Endpoints
 
-### Authentication
-
-* POST /auth/register
-* POST /auth/login
+### Auth
+- POST /auth/register
+- POST /auth/login
 
 ### Clients
-
-* POST /api/clients
-* GET /api/clients
-* GET /api/clients/{id}
-* PUT /api/clients/{id}
-* DELETE /api/clients/{id}
+- POST /api/clients
+- GET /api/clients
+- GET /api/clients/{id}
+- PUT /api/clients/{id}
+- DELETE /api/clients/{id}
 
 ### Consultations
+- POST /api/consultations
+- GET /api/consultations
+- GET /api/consultations/{id}
+- PUT /api/consultations/{id}
+- DELETE /api/consultations/{id}
+- GET /api/consultations/client/{clientId}
 
-* POST /api/consultations
-* GET /api/consultations
-* GET /api/consultations/{id}
-* PUT /api/consultations/{id}
-* DELETE /api/consultations/{id}
-* GET /api/consultations/client/{clientId}
+## Run Project
 
-## Database
+1. Configure MySQL
+2. Update application.properties
+3. Run:
 
-MySQL
+mvn spring-boot:run
 
 ## Swagger
 
 http://localhost:8080/swagger-ui/index.html
-
-## Author
-
-Puneet Goyal
